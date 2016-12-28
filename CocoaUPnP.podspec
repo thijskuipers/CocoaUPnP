@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "CocoaUPnP"
-  s.version      = "1.1.1"
+  s.version      = "1.1.2"
   s.summary      = "A modern and well tested UPnP library which feature asynchronous network calls."
 
   s.description  = <<-DESC
@@ -17,8 +17,12 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/arcam/CocoaUPnP"
   s.license      = "MIT"
   s.author       = { "Paul Williamson" => "PaulW@arcam.co.uk" }
-  s.platform     = :ios, "8.0"
-  s.source       = { :git => "https://github.com/arcam/CocoaUPnP.git", :tag => s.version.to_s }
+  
+  # s.platform     = :ios, "8.0"
+  s.ios.deployment_target = '8.0'
+  s.osx.deployment_target = '10.8'
+  
+  s.source       = { :git => "https://github.com/thijskuipers/CocoaUPnP.git", :tag => s.version.to_s }
   s.source_files = "CocoaUPnP", "CocoaUPnP/**/*.{h,m}"
   s.requires_arc = true
   s.xcconfig     = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
